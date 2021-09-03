@@ -129,7 +129,9 @@ input{
 }
 
 /*main*/
-.intro.right{
-    height: 1200px;
-    background-color: beige;
+.main{
+    float: center;
+    height:400px;
+    display: flex;
+    place-items: center;
 }
