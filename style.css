@@ -7,17 +7,32 @@ body{
 }
 
 /*header*/
-header h1{
-    position: absolute;
-    left: 0;
-    top: 20px;
-}
-
 .navbar{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px  30px;
+    padding: 60px 30px;
+}
+
+.navbar_brand{
+    font-size: 18px;
+    position: absolute;
+    margin: 0 -35px;
+    top: 57px;
+}
+
+.navbar_brandname{
+    font-size: 43px;
+    position: absolute;
+    margin: 0 -35px;
+    top: 75px;
+}
+
+.navbar_logo i{
+    font-size: 65px;
+    position: absolute;
+    margin: 0 -125px;
+    color: rgb(45, 55, 94);
 }
 
 .navbar_menu{
@@ -26,7 +41,7 @@ header h1{
     align-items: center;
     list-style: none;
     justify-content: center; /*가운데*/
-    top: 150px;
+    top: 160px;
     width: 100%;
     background-color: rgb(107, 123, 189);
 }
@@ -42,20 +57,60 @@ header h1{
     background-color: rgb(179, 188, 223);
 }
 
+.navbar_togglebtn{
+    display: none;
+    position: absolute;
+    top: 130px;
+    right: 20px;
+    font-size: 20px;
+    color: rgb(54, 58, 79);
+}
+
 @media screen and (max-width: 1230px) {
     .navbar{
         flex-direction: column;
-        padding-top: 50px;
+        padding-top: 70px;
+    }
+
+    
+    .navbar_brand{
+        font-size: 17px;
+        position: absolute;
+        margin: 0 -15px;
+        top: 68px;
+    }
+
+    .navbar_brandname{
+        font-size: 35px;
+        position: absolute;
+        margin: 0 -15px;
+        top: 78px;
+    }
+    
+    .navbar_logo i{
+        font-size: 50px;
+        position: absolute;
+        margin: 0 -85px;
+        color: rgb(45, 55, 94);
     }
 
     .navbar_menu{
         flex-direction: column;
+        display: none;
     }
 
     .navbar_menu li{
         width: 100%;
         border-radius: 10px;
         text-align: center;
+    }
+
+    .navbar_togglebtn{
+        display: block;
+    }
+
+    .navbar_menu.active{
+        display: flex;
     }
 }
 
